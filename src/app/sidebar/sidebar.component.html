@@ -1,0 +1,61 @@
+<!-- SIDEBAR -->
+<section id="sidebar">
+  <a routerLink="/" class="brand">
+    <img src="assets/img/restaurant.png" style="height: 40px; width: 40px; margin-left: 15px;" />
+    <span class="text" style="margin-left: 10px;"> MakyaTraiteur</span>
+  </a>
+  <ul class="side-menu top">
+    <li routerLinkActive="active" >
+      <a routerLink="/">
+        <i class='bx bxs-dashboard'></i>
+        <span class="text">Dashboard</span>
+      </a>
+    </li>
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a routerLink="/makyatraiteur/menu">
+        <i class='bx bxs-food-menu'></i>
+        <span class="text">Menu</span>
+      </a>
+    </li>
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a routerLink="/makyatraiteur/commandes">
+        <i class='bx bxs-cart'></i>
+        <span class="text">Commandes</span>
+      </a>
+    </li>
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a routerLink="/makyatraiteur/clients">
+        <i class='bx bxs-group'></i>
+        <span class="text">Clients</span>
+      </a>
+    </li>
+    <li>
+      <a (click)="logout()" class="logout">
+        <i class='bx bxs-log-out-circle'></i>
+        <span class="text">Logout</span>
+      </a>
+    </li>
+  </ul>
+</section>
+<!-- SIDEBAR -->
+
+
+<section id="content">
+  <!-- NAVBAR -->
+  <nav>
+    <form action="#">
+      <div class="form-input">
+        <input type="search" placeholder="Search...">
+        <button type="button" class="search-btn"><i class='bx bx-search'></i></button>
+      </div>
+    </form>
+    <a href="#" class="notification">
+      <i class='bx bxs-bell'></i>
+      <span class="num">8</span>
+    </a>
+    <a href="#" class="profile">
+      <i class="bx bxs-user-circle"></i>
+    </a>
+  </nav>
+  <!-- NAVBAR -->
+</section>
