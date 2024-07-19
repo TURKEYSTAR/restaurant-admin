@@ -1,8 +1,7 @@
 <!-- SIDEBAR -->
 <section id="sidebar">
   <a routerLink="/" class="brand">
-    <img src="assets/img/restaurant.png" style="height: 40px; width: 40px; margin-left: 15px;" />
-    <span class="text" style="margin-left: 10px;"> MakyaTraiteur</span>
+    <img src="assets/img/MakyaLogo.png" id="logo" />
   </a>
   <ul class="side-menu top">
     <li routerLinkActive="active" >
@@ -43,18 +42,15 @@
 <section id="content">
   <!-- NAVBAR -->
   <nav>
+    <i class='bx bx-heart'></i>
     <form action="#">
       <div class="form-input">
         <input type="search" placeholder="Search...">
         <button type="button" class="search-btn"><i class='bx bx-search'></i></button>
       </div>
     </form>
-    <a href="#" class="notification">
-      <i class='bx bxs-bell'></i>
-      <span class="num">8</span>
-    </a>
-    <a href="#" class="profile">
-      <i class="bx bxs-user-circle"></i>
+    <a routerLink="/makyatraiteur/profile" class="profile">
+      <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359554_1280.png" alt="">
     </a>
   </nav>
   <!-- NAVBAR -->

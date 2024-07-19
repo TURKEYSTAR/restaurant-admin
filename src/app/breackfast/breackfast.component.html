@@ -1,5 +1,4 @@
 <section id="content">
-  <!-- MAIN -->
   <main>
     <div class="head-title">
       <div class="left">
@@ -14,7 +13,7 @@
           </li>
           <li><i class='bx bx-chevron-right'></i></li>
           <li>
-            <a class="active" routerLink="/makyatraiteur/menu/breackfast">Petit Déjeuner</a>
+            <a class="active" routerLink="/makyatraiteur/menu/breackfast">{{ categoryName | titlecase }}</a>
           </li>
         </ul>
       </div>
@@ -23,18 +22,17 @@
     <div class="table-data">
       <div class="product" *ngFor="let product of products">
         <img [src]="product.image" alt="{{ product.name }}" style="width: 150px; height: 160px; border-radius: 10px;">
-        <a routerLink="">
+        <a routerLink="/makyatraiteur/menu/edit-produit/{{ product._id }}" class="product-info">
           <h5>{{ product.name }}</h5>
-          <h6>{{ product.price }}</h6>
+          <h6>{{ product.price }}Fcfa</h6>
         </a>
       </div>
       <div class="add-product">
         <h3 class="add-product-title">Nouveau produit</h3>
-        <a routerLink="/makyatraiteur/menu/ajout-produit" class="add-product-link">
+        <a [routerLink]="['/makyatraiteur/menu/ajout-produit', categoryName]" class="add-product-link">
           <i class="bx bx-plus add-product-icon"></i>
         </a>
       </div>
     </div>
   </main>
 </section>
-

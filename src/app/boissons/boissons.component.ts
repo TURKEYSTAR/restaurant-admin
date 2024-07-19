@@ -1,15 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-boissons',
   templateUrl: './boissons.component.html',
   styleUrls: ['./boissons.component.css']
 })
-export class BoissonsComponent {
-  products = [
-    { name: 'Boissons gazeuses', image: 'assets/img/gaz.jpg', price: '350 Fcfa' },
-    { name: 'Jus locaux', image: 'assets/img/nature.jpg', price: '300 Fcfa' },
-    { name: 'Eau', image: 'assets/img/eau.jpg', price: '250 Fcfa' }
-  ];
+export class BoissonsComponent implements OnInit {
+  products: { name: string; image: string; price: string; }[] = [];
 
+  constructor(private productService: ProductService) {}
+
+  ngOnInit() {
+    this.products = this.productService.getProducts('boissons');
+  }
 }

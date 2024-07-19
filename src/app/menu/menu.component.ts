@@ -1,16 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CategoryService } from '../category.service';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
-export class MenuComponent {
-  categories = [
-    { name: 'Petit Déjeuner', image: 'assets/img/breakfast1.jpg', link: '/makyatraiteur/menu/breackfast' },
-    { name: 'Plat du Jour', image: 'assets/img/plats.jpg', link: '/makyatraiteur/menu/plats' },
-    { name: 'Fast Food', image: 'assets/img/fastfood.jpg', link: '/makyatraiteur/menu/fastfood' },
-    { name: 'Viennoiseries', image: 'assets/img/viennoiseries2.jpg', link: '/makyatraiteur/menu/viennoiseries' },
-    { name: 'Boissons', image: 'assets/img/boissons.jpg', link: '/makyatraiteur/menu/boissons' }
-  ];
+export class MenuComponent implements OnInit {
+  categories: { name: string; image: string; link: string }[] = []; 
+
+  constructor(private categoryService: CategoryService) {}
+
+  ngOnInit() {
+    this.categories = this.categoryService.getCategories();
+  }
 }

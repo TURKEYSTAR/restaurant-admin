@@ -20,16 +20,17 @@ li {
   --lato: 'Lato', sans-serif;
 
   --light: #F9F9F9;
-  --blue: #da6207;
-  --light-blue: #fdbc9b;
+  --blue: #c05300;
+  --light-blue: #682300;
   --grey: #eee;
   --dark-grey: #AAAAAA;
   --dark: #342E37;
   --red: #1b950b;
   --yellow: #FFCE26;
-  --light-yellow: #FFF2C6;
-  --orange: #9f1d1d;
-  --light-orange: #FFE0D3;
+  --light-yellow: #fde184;
+  --orange: #0c951a;
+  --light-orange: #8bd275;
+  --rouge: #bb0900;
 }
 
 html {
@@ -53,7 +54,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 280px;
+  width: 260px;
   height: 100%;
   background: var(--light);
   z-index: 2000;
@@ -66,28 +67,11 @@ body {
   display: none;
 }
 #sidebar .brand {
-  font-size: 24px;
-  font-weight: 700;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  color: var(--blue);
-  position: sticky;
-  top: 0;
-  left: 0;
   background: var(--light);
-  z-index: 500;
-  padding-bottom: 20px;
-  box-sizing: content-box;
-}
-#sidebar .brand .bx {
-  min-width: 60px;
-  display: flex;
-  justify-content: center;
 }
 #sidebar .side-menu {
   width: 100%;
-  margin-top: 48px;
+  margin-top: 15px;
 }
 #sidebar .side-menu li {
   height: 48px;
@@ -135,13 +119,14 @@ body {
   overflow-x: hidden;
 }
 #sidebar .side-menu.top li.active a {
-  color: var(--blue);
+  color: rgb(137, 55, 0);
   background: var(--light);
 }
 #sidebar .side-menu.top li a:hover {
   color: var(--blue);
 }
 #sidebar .side-menu li a.logout {
+  margin-top: 100px;
   color: var(--red);
   cursor: pointer;
 }
@@ -160,8 +145,8 @@ body {
 /* CONTENT */
 #content {
   position: relative;
-  width: calc(100% - 280px);
-  left: 280px;
+  width: calc(100% - 260px);
+  left: 260px;
   transition: .3s ease;
 }
 
@@ -231,7 +216,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--blue);
+  background: var(--light-blue);
   color: var(--light);
   font-size: 18px;
   border: none;
@@ -239,25 +224,8 @@ body {
   border-radius: 0 36px 36px 0;
   cursor: pointer;
 }
-#content nav .notification {
-  font-size: 20px;
-  position: relative;
-}
-#content nav .notification .num {
-  position: absolute;
-  top: -6px;
-  right: -6px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 2px solid var(--light);
-  background: var(--red);
-  color: var(--light);
-  font-weight: 700;
-  font-size: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#content nav form .form-input button:hover {
+  background: var(--blue);
 }
 #content nav .profile img {
   width: 36px;
@@ -341,6 +309,7 @@ body {
 #content main .box-info li {
   padding: 24px;
   background: var(--light);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.364);
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -350,6 +319,7 @@ body {
   width: 80px;
   height: 80px;
   border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.54);
   font-size: 36px;
   display: flex;
   justify-content: center;
@@ -389,6 +359,7 @@ body {
   color: var(--dark);
 }
 #content main .table-data > div {
+  box-shadow: 0 0 12px rgba(43, 43, 43, 0.364);
   border-radius: 20px;
   background: var(--light);
   padding: 24px;
@@ -449,10 +420,10 @@ body {
   font-weight: 700;
 }
 #content main .table-data .order table tr td .status.completed {
-  background: green;
+  background: var(--orange);
 }
 #content main .table-data .order table tr td .status.process {
-  background: var(--orange);
+  background: var(--rouge);
 }
 
 

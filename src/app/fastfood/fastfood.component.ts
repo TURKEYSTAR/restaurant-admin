@@ -1,14 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-fastfood',
   templateUrl: './fastfood.component.html',
   styleUrls: ['./fastfood.component.css']
 })
-export class FastfoodComponent {
-  products = [
-    { name: 'Hamburger', image: 'assets/img/burger.jpg', price: '1500 Fcfa' },
-    { name: 'Chawarma', image: 'assets/img/chawarma.jpg', price: '1000 Fcfa' }
-  ];
+export class FastfoodComponent implements OnInit {
+  products: { name: string; image: string; price: string; }[] = [];
 
+  constructor(private productService: ProductService) {}
+
+  ngOnInit() {
+    this.products = this.productService.getProducts('fastfood');
+  }
 }

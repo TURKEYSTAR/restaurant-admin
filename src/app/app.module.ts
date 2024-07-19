@@ -17,6 +17,8 @@ import { BoissonsComponent } from './boissons/boissons.component';
 import { AjoutCategorieComponent } from './ajout-categorie/ajout-categorie.component';
 import { AjoutProduitsComponent } from './ajout-produits/ajout-produits.component';
 import { EditProduitsComponent } from './edit-produits/edit-produits.component';
+import { FormsModule } from '@angular/forms';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -35,10 +37,12 @@ import { EditProduitsComponent } from './edit-produits/edit-produits.component';
     AjoutCategorieComponent,
     AjoutProduitsComponent,
     EditProduitsComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

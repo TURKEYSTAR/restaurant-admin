@@ -1,17 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../product.service';
 
 @Component({
-  selector: 'app-petit-dejeuner',
+  selector: 'app-breackfast',
   templateUrl: './breackfast.component.html',
   styleUrls: ['./breackfast.component.css']
 })
-export class BreackfastComponent {
-  products = [
-    { name: 'Café au Lait', image: 'assets/img/cafe-au-lait.jpg', price: '250 Fcfa', id: 1 },
-    { name: 'Café noir', image: 'assets/img/cafenoir.jpg', price: '100 Fcfa' },
-    { name: 'Chocolat chaud', image: 'assets/img/chocolatchaud.jpg', price: '300 Fcfa' },
-    { name: 'Pain au Chocolat', image: 'assets/img/pain-au-chocolat.jpg', price: '500 Fcfa' },
-  ];
+export class BreackfastComponent implements OnInit {
+  categoryName: string = 'breakfast';
+  products: any[] = [];
 
+  constructor(private productService: ProductService) {}
+
+  ngOnInit() {
+    this.products = this.productService.getProducts(this.categoryName);
+  }
 }
-

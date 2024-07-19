@@ -13,6 +13,7 @@ import { BoissonsComponent } from './boissons/boissons.component';
 import { AjoutCategorieComponent } from './ajout-categorie/ajout-categorie.component';
 import { AjoutProduitsComponent } from './ajout-produits/ajout-produits.component';
 import { EditProduitsComponent } from './edit-produits/edit-produits.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/makyatraiteur/admin', pathMatch: 'full' },
@@ -21,14 +22,15 @@ const routes: Routes = [
   { path: 'makyatraiteur/commandes', component: CommandesComponent },
   { path: 'makyatraiteur/clients', component: ClientsComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'makyatraiteur/profile', component: ProfileComponent },
   { path: 'makyatraiteur/menu/breackfast', component: BreackfastComponent },
   { path: 'makyatraiteur/menu/plats', component: PlatsComponent },
   { path: 'makyatraiteur/menu/fastfood', component: FastfoodComponent },
   { path: 'makyatraiteur/menu/viennoiseries', component: ViennoiseriesComponent },
   { path: 'makyatraiteur/menu/boissons', component: BoissonsComponent },
   { path: 'makyatraiteur/menu/ajout-categorie', component: AjoutCategorieComponent },
-  { path: 'makyatraiteur/menu/ajout-produit', component: AjoutProduitsComponent },
-  { path: 'makyatraiteur/menu/edit-produit', component: EditProduitsComponent }
+  { path: 'makyatraiteur/menu/ajout-produit/:CategoryName', component: AjoutProduitsComponent },
+  { path: 'makyatraiteur/menu/edit-produit/:id', component: EditProduitsComponent }
 ];
 
 
