@@ -14,6 +14,7 @@ import { AjoutCategorieComponent } from './ajout-categorie/ajout-categorie.compo
 import { AjoutProduitsComponent } from './ajout-produits/ajout-produits.component';
 import { EditProduitsComponent } from './edit-produits/edit-produits.component';
 import { ProfileComponent } from './profile/profile.component';
+import { SoldeComponent } from './solde/solde.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/makyatraiteur/admin', pathMatch: 'full' },
@@ -30,7 +31,8 @@ const routes: Routes = [
   { path: 'makyatraiteur/menu/boissons', component: BoissonsComponent },
   { path: 'makyatraiteur/menu/ajout-categorie', component: AjoutCategorieComponent },
   { path: 'makyatraiteur/menu/ajout-produit/:CategoryName', component: AjoutProduitsComponent },
-  { path: 'makyatraiteur/menu/edit-produit/:id', component: EditProduitsComponent }
+  { path: 'makyatraiteur/menu/edit-produit/:id', component: EditProduitsComponent },
+  { path: 'makyatraiteur/clients/solde', component: SoldeComponent }
 ];
 
 

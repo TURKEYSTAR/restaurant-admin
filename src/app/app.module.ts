@@ -19,6 +19,7 @@ import { AjoutProduitsComponent } from './ajout-produits/ajout-produits.componen
 import { EditProduitsComponent } from './edit-produits/edit-produits.component';
 import { FormsModule } from '@angular/forms';
 import { ProfileComponent } from './profile/profile.component';
+import { SoldeComponent } from './solde/solde.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ProfileComponent } from './profile/profile.component';
     AjoutProduitsComponent,
     EditProduitsComponent,
     ProfileComponent,
+    SoldeComponent,
   ],
   imports: [
     BrowserModule,
