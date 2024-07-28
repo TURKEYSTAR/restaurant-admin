@@ -15,10 +15,11 @@ import { AjoutProduitsComponent } from './ajout-produits/ajout-produits.componen
 import { EditProduitsComponent } from './edit-produits/edit-produits.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SoldeComponent } from './solde/solde.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/makyatraiteur/admin', pathMatch: 'full' },
-  { path: 'makyatraiteur/admin', component: MainComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'makyatraiteur/admin', component: MainComponent, canActivate: [AuthGuard] },
   { path: 'makyatraiteur/menu', component: MenuComponent },
   { path: 'makyatraiteur/commandes', component: CommandesComponent },
   { path: 'makyatraiteur/clients', component: ClientsComponent },
